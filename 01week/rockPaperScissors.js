@@ -31,6 +31,8 @@ function rockPaperScissors(hand1, hand2) {
 
 
 }
+
+//we are just doing a Tests
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
     rl.question('hand2: ', (answer2) => {
