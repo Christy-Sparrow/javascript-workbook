@@ -24,7 +24,14 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
+  // compare horizontal pattern for win
+  return (
+    board [0][0] === playerTurn && board [0][0] === playerTurn && board [0][2] === playerTurn
+    ||
+    board [1][0] === playerTurn && board [1][1] === playerTurn && board [1][2] === playerTurn
+    ||
+    board [2][0] === playerTurn && board [2][2] === playerTurn && board [2][2] === playerTurn
+  );
 }
 
 function verticalWin() {
