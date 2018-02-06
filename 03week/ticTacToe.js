@@ -25,7 +25,7 @@ function printBoard() {
 
 function horizontalWin() {
   // compare horizontal pattern for win
-  return (
+  return Board(
     board [0][0] === playerTurn && board [0][0] === playerTurn && board [0][2] === playerTurn
     ||
     board [1][0] === playerTurn && board [1][1] === playerTurn && board [1][2] === playerTurn
@@ -36,14 +36,29 @@ function horizontalWin() {
 
 function verticalWin() {
   // Your code here
+  return Board(
+    board [0][0] === playerTurn && board [1][0] === playerTurn && board [2][0] === playerTurn
+    ||
+    board [0][1] === playerTurn && board [1][1] === playerTurn && board [2][1] === playerTurn
+    ||
+    board [0][2] === playerTurn && board [1][2] === playerTurn && board [2][2] === playerTurn
+  );
 }
 
 function diagonalWin() {
   // Your code here
+  return Board(
+    board [0][0] === playerTurn && board [1][1] === playerTurn && board [2][2] === playerTurn
+    ||
+    board [2][0] === playerTurn && board [1][1] === playerTurn && board [0][2] === playerTurn
+
+  );
 }
 
 function checkForWin() {
   // Your code here
+  if ( horizontalWin() || verticalWin() || diagonalWin() ) {
+    console.log('Player ' + ' Wins the game!');
 }
 
 function ticTacToe(row, column) {
