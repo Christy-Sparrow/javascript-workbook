@@ -1,19 +1,38 @@
 'use strict';
 
-const assert = require('assert');
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
 
 function rockPaperScissors(hand1, hand2) {
 
   // Write code here
+  console.log(hand1,hand2, 'biddily boo tes test')
+}
+
+
+      if (hand1 === hand2) {
+
+            return("It's a tie!");
+
+      } else if (hand1 === 'rock'){
+
+            return hand2 === 'paper' ? "Hand two wins!" : "Hand one wins!";
+
+      } else if (hand1 === 'paper') {
+
+            return hand2 === 'scissors' ? "Hand two wins!" : "Hand one wins!";
+
+      } else if (hand1 === 'scissors'){
+
+            return hand2 === 'rock' ? "Hand two wins!" : "Hand one wins!";
+
+      }
+
+
+
+
 
 }
 
+//we are just doing a Tests
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
     rl.question('hand2: ', (answer2) => {
