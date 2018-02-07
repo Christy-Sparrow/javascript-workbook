@@ -1,6 +1,6 @@
 'use scrict';
 
-const arr = ['michael','paul','bob','tonya','nancy'];
+const arr = [michael','paul','bob','tonya','nancy'];
 
 const printListOfOlympians=(arr)=> {
   arr.forEach(function(ind) {
