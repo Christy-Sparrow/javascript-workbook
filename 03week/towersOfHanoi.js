@@ -13,33 +13,51 @@ let stacks = {
   c: []
 };
 
-function printStacks() {
+
+const printStacks = () => {
   console.log("a: " + stacks.a);
   console.log("b: " + stacks.b);
   console.log("c: " + stacks.c);
 }
 
-function movePiece() {
-  // Your code here
+
+const movePiece = (startStack, endStack)=> {
+
+  return stacks[endStack].push(stacks[startStack].pop());
+};
+
+
+
+
+const isLegal = (startStack, endStack) => {
+  // heyo why doesnt this worrrrk
+  if((stacks[endStack].length === 0) || ((stacks[endStack].length -1 )) > (stacks[startStack].length -1)) {
+    return true;
+  } else {
+    return false;
+  }
+
 
 }
 
-function isLegal() {
+const checkForWin = () => {
+// after moving pieces from stack A to B or C it checks against stack B or || stack C for a win otherwise returns false, no win.
+   if ((stacks.b === [ 4, 3, 2, 1]) || (stacks.c === [ 4, 3, 2, 1])){
+     return true;
+     console.log("YASSS")
+   } else {
+     return false;
+     console.log("NOOOOPE")
+   }
+}
+
+const towersOfHanoi = (startStack, endStack) => {
   // Your code here
+
 
 }
 
-function checkForWin() {
-  // Your code here
-
-}
-
-function towersOfHanoi(startStack, endStack) {
-  // Your code here
-
-}
-
-function getPrompt() {
+const getPrompt() {
   printStacks();
   rl.question('start stack: ', (startStack) => {
     rl.question('end stack: ', (endStack) => {
@@ -50,5 +68,3 @@ function getPrompt() {
 }
 
 getPrompt();
-
-
