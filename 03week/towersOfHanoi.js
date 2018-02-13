@@ -52,7 +52,14 @@ const checkForWin = () => {
 }
 
 const towersOfHanoi = (startStack, endStack) => {
-  // Your code here
+  // Main function that contains all functions to run to play the game
+    if (isLegal(startStack, endStack)) {
+        movePiece(startStack, endStack)
+    }
+    checkForWin() {
+    console.log("You have built the tower")
+    }
+
 
 
 }
