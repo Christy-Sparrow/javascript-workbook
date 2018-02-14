@@ -38,12 +38,28 @@ const latestExchangeRate = {
   multiplyByTen: (num) => num * 10
 }
 
-const baseDate = () => {
-  return latestExchangeRate.base + ' ' + latestExchangeRate.date
-  return latestExchangeRate.date
+const baseDate = (obj) => {
+  return obj.base + ' ' + obj.date
 }
-console.log(baseDate());
+console.log(baseDate(latestExchangeRate));
 
+
+const currencies =(obj2)=> {
+  Object.keys(obj2.rates).forEach((data) =>{
+    return console.log(data + ' ' + obj2.rates[data]);
+  });
+}
+currencies(latestExchangeRate);
+// console.log(currencies(latestExchangeRate));
+//
+
+// do {
+//   currencies(latestExchangeRate);
+//   console.log("")
+//
+// }
+//
+// obj2.currencies(latestExchangeRate);
 
 //create a function that returns the base and date for and object. Use latestExchangeRate as an example to test your function
 
