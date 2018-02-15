@@ -37,11 +37,16 @@ const latestExchangeRate = {
   },
   multiplyByTen: (num) => num * 10
 }
-
+m   ZÆ
 const baseDate = (obj) => {
   return obj.base + ' ' + obj.date
 }
 console.log(baseDate(latestExchangeRate));
+//const baseDate=(obj)=>{
+//  return `${obj.base} ${obj.date}`
+// }
+// console.log (baseDate(latestExchangeRate));
+
 
 
 const currencies =(obj2)=> {
@@ -50,21 +55,25 @@ const currencies =(obj2)=> {
   });
 }
 currencies(latestExchangeRate);
-// console.log(currencies(latestExchangeRate));
-//
-
-// do {
-//   currencies(latestExchangeRate);
-//   console.log("")
+// const getavailablecurrencies=(obj)=>{
 //
 // }
-//
-// obj2.currencies(latestExchangeRate);
+
 
 //create a function that returns the base and date for and object. Use latestExchangeRate as an example to test your function
 
 //create a function that returns a list of availble currencies from a given object. Use latestExchangeRate as an example to test your function
 
 // create a function that console logs a string with the currency and the currency rate for each currency in a given object. For example, 'AUD is at a 1.2742 conversion rate'. Use latestExchangeRate as an example to test your function
+// const printOutRates=(obj)=>{
+  // const rateObj
+}
+
 
 //create a function that takes in an object and console logs the result of the object's multiplyByTen method on each of the exchange rates. Use latestExchangeRate as an example to test your function
+// const multiplyByTen=(obj)=>{
+//   obj.keys(rateObj).forEach((currency)=> {
+//     console.log(obj.multiplyByTen(rateObj[currency]))
+//   });
+// }
+// multiplyByTen(latestExchangeRate)
