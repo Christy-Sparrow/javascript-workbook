@@ -7,9 +7,9 @@ const nums = strNums.map(Number);
 console.log(nums)
 
 // Find the sum of the even values
+// filters through even numbers in array and returns each even number
 const sumEvens = strNums.filter((Number) => {
   return (Number & 1) === 0; });
-}
 
 console.log(sumEvens);
 
